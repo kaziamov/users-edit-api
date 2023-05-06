@@ -1,6 +1,12 @@
 .vscode/
 .idea/
 .dist/
+.devcontainer/
+
+.venv/
+venv/
+
+.env
 
 *cache*
 

@@ -17,3 +17,6 @@ stop:
 
 rm-venv:
 	rm -rf `poetry env info -p`
+
+migrate:
+	poetry run alembic revision --autogenerate -m 'init'
