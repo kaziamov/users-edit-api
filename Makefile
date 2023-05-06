@@ -14,3 +14,6 @@ stop:
 	docker-compose stop && \
 	docker-compose rm && \
 	sudo rm -rf pgdata/
+
+rm-venv:
+	rm -rf `poetry env info -p`
