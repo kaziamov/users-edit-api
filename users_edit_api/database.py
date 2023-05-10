@@ -6,12 +6,11 @@ from typing import Optional
 
 from users_edit_api.settings import *
 
-
 class BaseDBModel(DeclarativeBase):
     pass
 
 
-def _connetion_init(conn):
+async def _connetion_init(conn):
     return conn
 
 
