@@ -7,13 +7,16 @@ dev: freeze
 logs:
 	docker-compose logs -f -t
 
-start-server:
-	uvicorn users_edit_api:app --host 0.0.0.0 --port 8000 --reload
+run-server:
+	poetry run uvicorn users_edit_api:app --host 0.0.0.0 --port 8000 --reload
+
+start-db:
+	docker-compose -f docker-compose.db.yml up
 
 freeze:
 	poetry export --without-hashes --format=requirements.txt > requirements.txt
 
-stop:
+rm:
 	docker-compose stop && \
 	docker-compose rm && \
 	sudo rm -rf pgdata/
